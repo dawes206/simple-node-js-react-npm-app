@@ -8,6 +8,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+		sh 'echo $HTTP_PROXY'
                 sh 'npm install'
             }
         }
